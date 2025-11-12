@@ -428,4 +428,6 @@
    * 以下のコメントを外して 1em (通常サイズ) に変更してください。
    */
    font-size: 1em !important; 
+  /* [追加] 引用ブロックの下に 1em (1文字分の高さ) の隙間を空ける */
+  margin-bottom: 1em !important;
 }
