@@ -403,3 +403,18 @@
 .notion-equation.notion-equation-block{
   align-items: center;
 }
+
+/* * 引用(Quote)ブロックのスタイル修正
+ * スターターキットによる意図しない赤/ピンクの背景と文字色を無効にし、
+ * Notionの標準的な見た目（背景なし・左ボーダーのみ）に戻す。
+ */
+.notion-quote {
+  /* 赤/ピンクの背景を無効化する */
+  background: none !important;
+
+  /* 赤/ピンクの文字色を無効化し、親要素の色（黒）を継承する */
+  color: inherit !important;
+
+  /* 赤/ピンクの左ボーダーを、Notion標準のグレーに変更する */
+  border-left-color: #DDDDDD !important; 
+}
