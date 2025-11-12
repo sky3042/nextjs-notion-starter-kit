@@ -410,6 +410,7 @@
  * 2. 背景色を薄いグレー（例: #f4f4f4）にする
  * 3. 文字色を親要素から継承（黒）する
  * 4. 左ボーダーの色をグレー（#DDDDDD）にする
+ * 5. [NEW] 文字サイズを通常サイズ(1em)にする
  */
 .notion-quote {
   /* [変更] 背景を薄いグレーにする */
@@ -421,13 +422,15 @@
   /* [変更なし] 左ボーダーをグレーに */
   border-left-color: #DDDDDD !important; 
   
-  /* [追加] 斜体をやめて、通常のフォントスタイルに戻す */
+  /* [変更なし] 斜体をやめて、通常のフォントスタイルに戻す */
   font-style: normal !important;
-
-  /* * [任意] もし文字サイズが大きすぎると感じたら、
-   * 以下のコメントを外して 1em (通常サイズ) に変更してください。
-   */
-   font-size: 1em !important; 
-  /* [追加] 引用ブロックの下に 1em (1文字分の高さ) の隙間を空ける */
-  margin-bottom: 1em !important;
+  
+  /* [追加] 文字サイズを 1em (通常サイズ) に変更 */
+  font-size: 1em !important;
+}
+/* * [NEW] 引用(Quote)ブロックが連続した場合のみ、
+ * 2つ目以降のブロックの上に隙間を追加する
+ */
+.notion-quote + .notion-quote {
+  margin-top: 0.8em !important;
 }
